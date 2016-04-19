@@ -1,0 +1,13 @@
+---
+- name: Deploy app to my server
+  hosts: all
+  vars:
+    ansistrano_before_setup_tasks_file: "{{ playbook_dir }}/infrastructure.yml"
+    ansistrano_deploy_to: "/var/www/html"
+    blackfire_server_id: 042e2b91-ca4f-4045-b87b-968e4c059852
+    blackfire_server_token: 68f717bd89ad8c7b727346e66b1cb608b798e41d70b7093118e74036609ab076
+    blackfire_apache_enable: true
+    blackfire_php_fpm_enable: false
+  roles:
+    - { role: carlosbuenosvinos.ansistrano-deploy }
+    - { role: AbdoulNdiaye.Blackfire, sudo: yes }

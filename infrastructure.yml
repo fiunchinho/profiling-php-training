@@ -1,0 +1,20 @@
+---
+
+- locale_gen: name=es_ES.UTF-8 state=present
+
+- name: "Install PHP5 and Apache2"
+  apt:
+    name: php5 sqlite3 php5-sqlite php5-mysql
+    state: present
+    update_cache: yes
+  become: yes
+  become_user: root
+
+- name: "Ubuntu user is the owner of /var/www/html"
+  file:
+    path: /var/www/html
+    owner: ubuntu
+    group: ubuntu
+    mode: 0755
+  become: yes
+  become_user: root
