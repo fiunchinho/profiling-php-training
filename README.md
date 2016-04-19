@@ -43,7 +43,7 @@ The [Blackfire](https://blackfire.io) stack is made of these components:
 - **[Blackfire Website](https://blackfire.io)**: used to visualize the profiles.
 
 
-## Getting started with [Blackfire.io](https://blackfire.io)
+### Getting started with [Blackfire.io](https://blackfire.io)
 - [Your First Profile](https://blackfire.io/docs/24-days/04-first-profile)
 - [Validating Performance Optimizations](https://blackfire.io/docs/24-days/05-validating-performance-optimizations)
 - [Profiling POST requests from the CLI](https://blackfire.io/docs/24-days/08-profiling-all-the-things)
